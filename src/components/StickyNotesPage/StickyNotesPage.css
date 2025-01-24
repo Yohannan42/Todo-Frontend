@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f3f4f7, #eafaf1); /* Light gradient background */
+}
+
+/* Page Container */
+.sticky-notes-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #00674f;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #e6f9f1;
+}
+
+/* Sticky Notes Grid */
+.sticky-notes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between sticky notes */
+}
+
+/* Sticky Note */
+.sticky-note {
+    font-family: 'Fredoka One';
+    background: #e59ba1; /* Sticky note color */
+    width: 200px; /* ✅ Set fixed width */
+    height: 150px; /* ✅ Set fixed height */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    word-wrap: break-word;
+    overflow: hidden; /* ✅ Prevents text overflow */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; /* Ensures content is properly spaced */
+    text-align: center; /* Centers the text */
+}
+
+.sticky-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sticky-note h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+    white-space: nowrap; /* ✅ Prevents long text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* ✅ Adds '...' for overflow */
+}
+
+.sticky-note p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+    white-space: nowrap; /* ✅ Keeps text in one line */
+    overflow: hidden;
+    text-overflow: ellipsis; /* ✅ Adds '...' if text is too long */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .sticky-notes-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .sticky-notes-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}

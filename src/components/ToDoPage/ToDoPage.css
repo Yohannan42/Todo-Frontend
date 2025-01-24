@@ -1,0 +1,268 @@
+.todo-container {
+    padding: 20px;
+    background-image: url("../../assets/EmeraldBG.png"); /* Path to the image */
+  background-size: cover; /* Scale the image to cover the entire background */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+  background-position: center; 
+
+  }
+  
+  .header {
+    background-color: #056951;
+    font-family: 'Fredoka One';
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .task-input {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .task-input-field {
+    font-family: 'Fredoka One';
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+  }
+  
+  .add-task-button {
+    background-color: #00674f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* New Section for Date and Time Inputs */
+  .date-time-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .date-picker,
+  .time-picker {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white; /* White background */
+    color: black; /* Black text color */
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  
+  
+  .delete-task-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .filter-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+  }
+  
+  .filter-controls label {
+    flex-basis: 100%;
+    font-weight: bold;
+   
+  }
+  
+  .filter-controls input,
+  .filter-controls select {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #e59ba1;
+  }
+  
+  .filter-button {
+    background-color: #00674f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .filter-button:hover {
+    background-color: #004a36;
+  }
+  .toggle-filter-button {
+    background-color: #004a36;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .modal-input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #e59ba1;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .add-task-button {
+    background-color: #00674f;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical alignment */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #28a745; /* Green border */
+    border-radius: 5px;
+    background-color: #c3ecdd !important; /* ✅ Force light green background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better look */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation */
+    color: #333; /* Default text color */
+}
+
+  .task-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    background-color: #bbdefb; /* Lighter blue on hover */
+    color: #000; /* Darker text for hover state */
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px; /* Add space between Edit and Delete buttons */
+  }
+  
+  .edit-task-button {
+    background-color: #00674f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-task-button:hover {
+    background-color: #0d4639;
+  }
+  
+  .delete-task-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-task-button:hover {
+    background-color: #c0392b;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .delete-task-button {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cancel-button {
+    background: gray;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

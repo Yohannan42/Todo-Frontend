@@ -1,0 +1,186 @@
+.mood-tracker-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.mood-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mood-header h1 {
+    font-size: 2rem;
+    color: #00674f;
+}
+
+.mood-header p {
+    color: #333;
+}
+
+/* Mood Tools Section: Choose Date and Estimate Mood */
+.mood-tools {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.select-date-button,
+.estimate-mood-button {
+    padding: 8px 12px;
+    background-color: #00674f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.select-date-button:hover,
+.estimate-mood-button:hover {
+    background-color: #004a36;
+}
+
+/* Mood Calendar */
+.mood-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.calendar-day {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-day span {
+    display: block;
+}
+
+.calendar-day .mood {
+    font-size: 0.8rem;
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: #00674f;
+    border-radius: 3px;
+}
+
+/* Mood Selector */
+.mood-selector {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mood-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mood-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.mood-button.happy {
+    background-color: #28a745;
+}
+
+.mood-button.neutral {
+    background-color: #ffc107;
+}
+
+.mood-button.sad {
+    background-color: #dc3545;
+}
+
+.mood-button.stressed {
+    background-color: #17a2b8;
+}
+
+.mood-button.excited {
+    background-color: #6f42c1;
+}
+
+/* Mood Stats Section */
+.mood-stats {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.mood-chart {
+    margin-top: 20px;
+}
+
+.streak-info {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Add Mood Section */
+.add-mood-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-mood-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-mood-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date-picker {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.mood-select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-mood-button {
+    padding: 8px 12px;
+    background-color: #00674f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-mood-button:hover {
+    background-color: #004a36;
+}

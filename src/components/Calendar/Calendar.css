@@ -1,0 +1,150 @@
+/* Full-page layout */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Calendar Header */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Set max width to prevent overflow */
+    margin-bottom: 20px;
+  }
+  
+  .nav-button {
+    background-color: #00674f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #004a36;
+  }
+  
+  .month-year {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Days of the Week */
+  .days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Seven columns for days */
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .day-name {
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  /* Calendar Days */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr)); /* Ensure even distribution */
+    gap: 5px;
+    width: 100%;
+    max-width: 1000px;
+    flex: 1; /* Take up available space */
+  }
+  
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #ffffff;
+    min-height: 100px; /* Increase for better visibility */
+  }
+  
+  .day.today {
+    background-color: #00674f;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .day.current-month {
+    color: #000000;
+  }
+  
+  .day.other-month {
+    color: #a0a0a0;
+  }
+  
+  .event {
+    margin-top: 5px;
+    padding: 2px 4px;
+    background-color: #00674f;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  /* Prevent overflow of calendar */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* Ensure task event spans full width of calendar box */
+.calendar-grid .day {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make child elements stretch to fill width */
+    justify-content: flex-start;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #ffffff;
+    min-height: 100px;
+  }
+  
+  .calendar-grid .event-list {
+    width: 100%; /* Ensure events span the full width of the box */
+  }
+  
+  .calendar-grid .event {
+    display: block; /* Ensure events take up the full width of the container */
+    margin-top: 5px;
+    padding: 5px 0; /* Add padding for better visibility */
+    background-color: #00674f;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

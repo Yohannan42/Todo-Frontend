@@ -1,0 +1,90 @@
+/* Navigation Toggle Icon */
+.nav-toggle-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-toggle-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease; /* Smooth sliding animation */
+    z-index: 999;
+}
+
+.navigation-bar.visible {
+    left: 0; /* Slide in when visible */
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Navigation Item Styling */
+.nav-item {
+    margin-bottom: 20px; /* Space between items */
+    background-color: #b5efc8; /* Light background for each item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Add padding for the bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-item:hover {
+    background-color: #e0f7fa; /* Light teal on hover */
+    transform: translateX(5px); /* Slight shift on hover */
+}
+
+/* Navigation Link Styling */
+.nav-link {
+    text-decoration: none;
+    color: #000000; /* Default text color */
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: bold; /* Make the text bold */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.nav-link:hover {
+    color: #00695c; /* Dark teal for hover effect */
+}
+
+/* Navigation Icon */
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s; /* Icon hover animation */
+}
+
+.nav-link:hover .nav-icon {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: 998; /* Below the navigation bar */
+}
