@@ -1,48 +1,210 @@
-body {
-  font-family: Arial, sans-serif;
+/* App Layout */
+.app-container {
+  display: flex;
+  width: 100vw; /* Full width of the browser window */
+  height: 100vh; /* Full height of the browser window */
+  background-color: #ffffff; /* White background */
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
+  overflow: hidden; /* Prevent scrollbars */
+  color: #000000; /* Black text */
 }
 
-div {
-  background: white;
+/* Navigation Bar */
+/* Navigation Bar */
+.navigation-bar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #00674F; /* Emerald green */
+  color: #ffffff; /* Default color for other elements */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure it spans the full height */
+  position: fixed; /* Keep it fixed on the left side */
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
 
-input {
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.navigation-bar .nav-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff; /* Keep the title white */
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.navigation-bar .nav-item {
+  margin: 15px 0;
 }
 
-ul {
-  list-style-type: none;
+.navigation-bar .nav-link {
+  text-decoration: none;
+  color: #000000; /* Black text for the navigation links */
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navigation-bar .nav-link:hover {
+  color: #00a37a; /* Lighter emerald green for hover */
+}
+
+/* Content Container */
+.content-container {
+  margin-left: 250px; /* Push content to the right of the navigation bar */
+  flex: 1; /* Allow content to take the remaining width */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure it spans the full height */
+  overflow: auto; /* Allow scrolling within the content */
   padding: 0;
 }
 
-li {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #ff4d4d;
-  color: white;
+/* Header */
+.header {
+  background-color: #00674F; /* Emerald green */
+  padding: 20px;
+  color: #ffffff; /* White text */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center; /* Center the header text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1; /* Fill the remaining vertical space below the header */
+  padding: 20px;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for contrast */
+  overflow-y: auto; /* Allow vertical scrolling for content */
+}
+
+/* Task Input */
+.task-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Light gray background for input section */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.task-input-field {
+  flex: 1; /* Take up the remaining space */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: #000000; /* Black text */
+  background-color: #ffffff; /* White background for input field */
+}
+
+.add-task-button {
+  background-color: #00674F; /* Emerald green button */
+  color: white; /* White text */
   border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task-button:hover {
+  background-color: #004a36; /* Darker emerald green */
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #ffffff; /* White background */
+  transition: background-color 0.3s;
+  color: #000000; /* Black text */
+}
+
+.task-item:hover {
+  background-color: #f8f9fa; /* Slightly lighter background on hover */
+}
+
+.delete-task-button {
+  background-color: #e74c3c; /* Red button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-task-button:hover {
+  background-color: #c0392b; /* Darker red */
+}
+/* Animated Background Shapes */
+.app-container {
+  position: relative;
+  overflow: hidden; /* Ensures shapes don’t scroll out of view */
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+}
+
+/* Add Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #00674F; /* Emerald green */
+  animation: float 15s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+/* Size and Position of Circles */
+.circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+.circle:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+  animation-duration: 12s;
+}
+.circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  animation-duration: 18s;
+}
+
+/* Animation Keyframes */
+@keyframes float {
+  0% {
+      transform: translateY(0px) translateX(0px);
+  }
+  50% {
+      transform: translateY(-50px) translateX(50px);
+  }
+  100% {
+      transform: translateY(0px) translateX(0px);
+  }
 }
