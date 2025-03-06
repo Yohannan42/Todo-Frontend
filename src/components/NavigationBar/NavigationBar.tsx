@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavigationBar.css";
 import listIcon from "../../assets/listicon.svg"; 
 import taskIcon from "../../assets/task.png";
@@ -10,7 +10,6 @@ import calendarIcon from "../../assets/calendar.png";
 
 const NavigationBar = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const navigate = useNavigate();
 
   const navItems = [
     { id: 1, name: "Tasks", path: "/tasks", icon: taskIcon },

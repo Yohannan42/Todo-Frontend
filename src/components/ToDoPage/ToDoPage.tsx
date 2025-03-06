@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { getTasks, createTask, deleteTask } from "../../api/taskApi";
 import "./ToDoPage.css";
 import axios from "axios";
-import gsap from "gsap";
+
 
 interface Task {
   _id: string;

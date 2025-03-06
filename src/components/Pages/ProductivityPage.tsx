@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getTasks } from "../../api/taskApi";
 import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
@@ -7,7 +7,7 @@ import { CategoryScale } from "chart.js";
 
 Chart.register(CategoryScale);
 const ProductivityPage = () => {
-  const [tasks, setTasks] = useState<{ _id: string; title: string; date?: string; status?: string }[]>([]);
+  const [, setTasks] = useState<{ _id: string; title: string; date?: string; status?: string }[]>([]);
   const [weeklyData, setWeeklyData] = useState<number[]>([]);
   const [monthlyData, setMonthlyData] = useState<number[]>([]);
   const [completedTasks, setCompletedTasks] = useState<number>(0);
@@ -112,7 +112,4 @@ console.log("Updated tasks state:", fetchedTasks);  // Corrected from setTodos t
 }  
 
 export default ProductivityPage;
-function setTodos(fetchedTasks: any[]) {
-    throw new Error("Function not implemented.");
-}
 

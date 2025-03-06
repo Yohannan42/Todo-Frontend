@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getTasks } from "../../api/taskApi";
 import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
 import "./StickyNotesPage.css";
