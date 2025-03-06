@@ -7,6 +7,7 @@ import Calendar from "./components/Calendar/Calendar";
 import "./App.css";
 import MoodTrackerPage from "./components/MoodTrackerPage/MoodTrackerPage";
 import StickyNotesPage from "./components/StickyNotesPage/StickyNotesPage";
+import ProductivityPage from "./components/Pages/ProductivityPage";
 
 const App: React.FC = () => {
     const [todos, setTodos] = useState<{ _id: string; title: string; date?: string; time?: string }[]>([]);
@@ -112,6 +113,7 @@ const App: React.FC = () => {
                         
                         {/* Route for Sticky Notes */}
                         <Route path="/sticky-notes" element={<StickyNotesPage />} />
+                        <Route path="/productivity" element={<ProductivityPage />} />
                         
                         {/* Route for Calendar */}
                         <Route path="/calendar" element={<Calendar events={todos} />} />

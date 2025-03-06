@@ -6,8 +6,21 @@ import "./ToDoPage.css";
 import axios from "axios";
 import gsap from "gsap";
 
-const ToDoPage = () => {
-  const [todos, setTodos] = useState<{ _id: string; title: string; date?: string; priority?: string; status?: string }[]>([]);
+interface Task {
+  _id: string;
+  title: string;
+  date?: string;
+  priority?: string;
+  status?: string;
+}
+
+interface ToDoPageProps {
+  todos: Task[];
+  setTodos: React.Dispatch<React.SetStateAction<Task[]>>;
+}
+
+const ToDoPage: React.FC<ToDoPageProps> = ({ todos, setTodos }) => {
+  
   const [task, setTask] = useState<string>("");
   const [date, setDate] = useState<Date | null>(null);
   const [priority, setPriority] = useState<string>("Medium");
@@ -239,32 +252,13 @@ const handleFilterTasks = async () => {
               className="modal-input"
             />
           <DatePicker
-  selected={filterParams.dueDateRange ? new Date(filterParams.dueDateRange.split(",")[0]) : null}
-  onChange={(date) => {
-    if (date) {
-      setFilterParams((prev) => ({
-        ...prev,
-        dueDateRange: `${date.toISOString().split("T")[0]},${prev.dueDateRange.split(",")[1] || ""}`,
-      }));
-    }
-  }}
+  selected={date}
+  onChange={(date: Date | null) => setDate(date)}
   dateFormat="yyyy-MM-dd"
-  placeholderText="Start Date"
+  placeholderText="Select a date"
+  className="modal-input"
 />
 
-<DatePicker
-  selected={filterParams.dueDateRange ? new Date(filterParams.dueDateRange.split(",")[1]) : null}
-  onChange={(date) => {
-    if (date) {
-      setFilterParams((prev) => ({
-        ...prev,
-        dueDateRange: `${prev.dueDateRange.split(",")[0] || ""},${date.toISOString().split("T")[0]}`,
-      }));
-    }
-  }}
-  dateFormat="yyyy-MM-dd"
-  placeholderText="End Date"
-/>
 
             <select
               value={priority}

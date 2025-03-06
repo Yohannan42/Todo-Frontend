@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavigationBar.css";
 import listIcon from "../../assets/listicon.svg"; // Import the menu icon
 import taskIcon from "../../assets/task.png";
@@ -7,18 +7,17 @@ import stickyNoteIcon from "../../assets/StickyNotes.png";
 import productivityIcon from "../../assets/Tracker.png";
 import moodTrackerIcon from "../../assets/react.svg";
 import calendarIcon from "../../assets/calendar.png";
-import extrasIcon from "../../assets/listicon.svg";
 
 const NavigationBar = () => {
-  const [isVisible, setIsVisible] = useState(false); // State to toggle visibility
+  const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
-    { id: 1, name: "Tasks", path: "/Tasks", icon: taskIcon },
+    { id: 1, name: "Tasks", path: "/tasks", icon: taskIcon },
     { id: 2, name: "Sticky Note", path: "/sticky-notes", icon: stickyNoteIcon },
     { id: 3, name: "Productivity Status", path: "/productivity", icon: productivityIcon },
     { id: 4, name: "Mood Tracker", path: "/mood-tracker", icon: moodTrackerIcon },
     { id: 5, name: "Calendar", path: "/calendar", icon: calendarIcon },
-    { id: 6, name: "Extras", path: "/extras", icon: extrasIcon },
   ];
 
   const handleToggle = () => {

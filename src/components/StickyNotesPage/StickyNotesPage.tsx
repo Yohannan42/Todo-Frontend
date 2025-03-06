@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getTasks } from "../../api/taskApi";
-
 import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
-
 import "./StickyNotesPage.css";
 
 const StickyNotesPage = () => {
@@ -21,34 +19,28 @@ const StickyNotesPage = () => {
     fetchTasks();
   }, []);
 
-  // Handle drag-and-drop reordering
+  // Handle drag-and-drop reordering in the grid layout
   const handleDragEnd = (result: DropResult) => {
-    if (!result.destination) return; // If dropped outside the list, do nothing
+    if (!result.destination) return; // If dropped outside, do nothing
 
     const reorderedTasks = Array.from(tasks);
-    const [movedTask] = reorderedTasks.splice(result.source.index, 1); // Remove task from its original position
-    reorderedTasks.splice(result.destination.index, 0, movedTask); // Insert task at the new position
+    const [movedTask] = reorderedTasks.splice(result.source.index, 1); // Remove the dragged task
+    reorderedTasks.splice(result.destination.index, 0, movedTask); // Insert at the new position
 
     setTasks(reorderedTasks); // Update the state with reordered tasks
-    console.log("Drag result:", result); // Debug
-  if (!result.destination) return;
-  console.log("Valid drag result");
   };
 
   return (
     <div className="sticky-notes-container">
       <header className="header">
         <h1>Sticky Notes</h1>
-        <p>Organize your tasks visually!</p>
+        <p>Drag and drop your tasks to rearrange them freely.</p>
       </header>
+
       <DragDropContext onDragEnd={handleDragEnd}>
-        <Droppable droppableId="sticky-notes-grid">
+        <Droppable droppableId="sticky-notes-grid" direction="vertical" type="TASK">
           {(provided) => (
-            <div
-              className="sticky-notes-grid"
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
+            <div className="sticky-notes-grid" ref={provided.innerRef} {...provided.droppableProps}>
               {tasks.map((task, index) => (
                 <Draggable key={task._id} draggableId={task._id} index={index}>
                   {(provided) => (
@@ -66,7 +58,7 @@ const StickyNotesPage = () => {
                   )}
                 </Draggable>
               ))}
-              {provided.placeholder}
+              {provided.placeholder} {/* ✅ Ensures space is created dynamically anywhere in the grid */}
             </div>
           )}
         </Droppable>

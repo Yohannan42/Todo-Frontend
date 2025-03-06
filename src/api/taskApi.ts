@@ -7,7 +7,7 @@ interface TaskPayload {
   date: string;
   time: string;
   priority: string; // Add priority
-    status: string; 
+  status: string; 
 }
 
 export const getTasks = async (): Promise<any[]> => {
