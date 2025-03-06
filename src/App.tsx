@@ -110,15 +110,9 @@ const App: React.FC = () => {
 
                         {/* Route for To-Do List */}
                         <Route path="/Tasks" element={<ToDoPage todos={todos} setTodos={setTodos} />} />
-                        
-                        {/* Route for Sticky Notes */}
                         <Route path="/sticky-notes" element={<StickyNotesPage />} />
                         <Route path="/productivity" element={<ProductivityPage />} />
-                        
-                        {/* Route for Calendar */}
                         <Route path="/calendar" element={<Calendar events={todos} />} />
-                        
-                        {/* Route for Mood Tracker */}
                         <Route path="/mood-tracker" element={<MoodTrackerPage />} />
                     </Routes>
                 </div>

@@ -1,36 +1,35 @@
 /* App Layout */
 .app-container {
   display: flex;
-  width: 100vw; /* Full width of the browser window */
-  height: 100vh; /* Full height of the browser window */
-  background-color: #ffffff; /* White background */
+  width: 100vw; 
+  height: 100vh; 
+  background-color: #ffffff; 
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrollbars */
-  color: #000000; /* Black text */
+  overflow: hidden; 
+  color: #000000; 
 }
 
 /* Navigation Bar */
-/* Navigation Bar */
 .navigation-bar {
-  width: 250px; /* Fixed width for the sidebar */
-  background-color: #00674F; /* Emerald green */
-  color: #ffffff; /* Default color for other elements */
+  width: 250px; 
+  background-color: #00674F; 
+  color: #ffffff; 
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensure it spans the full height */
-  position: fixed; /* Keep it fixed on the left side */
+  height: 100vh; 
+  position: fixed; 
   top: 0;
   left: 0;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
 }
 
 .navigation-bar .nav-title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #ffffff; /* Keep the title white */
+  color: #ffffff; 
 }
 
 .navigation-bar .nav-item {
@@ -39,7 +38,7 @@
 
 .navigation-bar .nav-link {
   text-decoration: none;
-  color: #000000; /* Black text for the navigation links */
+  color: #000000; 
   font-size: 1rem;
   transition: color 0.3s;
 }
@@ -50,34 +49,34 @@
 
 /* Content Container */
 .content-container {
-  margin-left: 250px; /* Push content to the right of the navigation bar */
-  flex: 1; /* Allow content to take the remaining width */
+  margin-left: 250px; 
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensure it spans the full height */
-  overflow: auto; /* Allow scrolling within the content */
+  height: 100vh; 
+  overflow: auto; 
   padding: 0;
 }
 
 /* Header */
 .header {
-  background-color: #00674F; /* Emerald green */
+  background-color: #00674F; 
   padding: 20px;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: bold;
-  text-align: center; /* Center the header text */
+  text-align: center; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Main Content */
 .main-content {
-  flex: 1; /* Fill the remaining vertical space below the header */
+  flex: 1; 
   padding: 20px;
-  background-color: #ffffff; /* White background for contrast */
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for contrast */
-  overflow-y: auto; /* Allow vertical scrolling for content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  overflow-y: auto;
 }
 
 /* Task Input */
@@ -85,26 +84,26 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #f9f9f9; /* Light gray background for input section */
+  background-color: #f9f9f9; 
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .task-input-field {
-  flex: 1; /* Take up the remaining space */
+  flex: 1; 
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-right: 10px;
-  color: #000000; /* Black text */
-  background-color: #ffffff; /* White background for input field */
+  color: #000000; 
+  background-color: #ffffff; 
 }
 
 .add-task-button {
-  background-color: #00674F; /* Emerald green button */
-  color: white; /* White text */
+  background-color: #00674F; 
+  color: white; 
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
@@ -114,7 +113,7 @@
 }
 
 .add-task-button:hover {
-  background-color: #004a36; /* Darker emerald green */
+  background-color: #004a36; 
 }
 
 /* Task List */
@@ -132,17 +131,17 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 10px;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; 
   transition: background-color 0.3s;
-  color: #000000; /* Black text */
+  color: #000000; 
 }
 
 .task-item:hover {
-  background-color: #f8f9fa; /* Slightly lighter background on hover */
+  background-color: #f8f9fa; 
 }
 
 .delete-task-button {
-  background-color: #e74c3c; /* Red button */
+  background-color: #e74c3c; 
   color: white;
   border: none;
   padding: 5px 10px;
@@ -158,18 +157,18 @@
 /* Animated Background Shapes */
 .app-container {
   position: relative;
-  overflow: hidden; /* Ensures shapes don’t scroll out of view */
+  overflow: hidden; 
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black text */
+  background-color: #ffffff; 
+  color: #000000; 
 }
 
 /* Add Circles */
 .circle {
   position: absolute;
   border-radius: 50%;
-  background: #00674F; /* Emerald green */
+  background: #00674F;
   animation: float 15s infinite ease-in-out;
   opacity: 0.6;
 }
