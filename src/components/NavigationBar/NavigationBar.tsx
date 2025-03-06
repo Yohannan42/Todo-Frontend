@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./NavigationBar.css";
-import listIcon from "../../assets/listicon.svg"; // Import the menu icon
+import listIcon from "../../assets/listicon.svg"; 
 import taskIcon from "../../assets/task.png";
 import stickyNoteIcon from "../../assets/StickyNotes.png";
 import productivityIcon from "../../assets/Tracker.png";

@@ -177,24 +177,24 @@
     align-items: center; /* Ensure vertical alignment */
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #28a745; /* Green border */
+    border: 1px solid #28a745; 
     border-radius: 5px;
-    background-color: #c3ecdd !important; /* ✅ Force light green background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better look */
+    background-color: #c3ecdd !important; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation */
-    color: #333; /* Default text color */
+    color: #333; 
 }
 
   .task-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
-    background-color: #bbdefb; /* Lighter blue on hover */
-    color: #000; /* Darker text for hover state */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    background-color: #bbdefb; 
+    color: #000; 
   }
   
   .task-actions {
     display: flex;
-    gap: 10px; /* Add space between Edit and Delete buttons */
+    gap: 10px; 
   }
   
   .edit-task-button {

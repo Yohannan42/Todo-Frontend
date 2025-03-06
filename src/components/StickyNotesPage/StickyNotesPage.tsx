@@ -21,7 +21,7 @@ const StickyNotesPage = () => {
 
   // Handle drag-and-drop reordering in the grid layout
   const handleDragEnd = (result: DropResult) => {
-    if (!result.destination) return; // If dropped outside, do nothing
+    if (!result.destination) return; 
 
     const reorderedTasks = Array.from(tasks);
     const [movedTask] = reorderedTasks.splice(result.source.index, 1); // Remove the dragged task
@@ -58,7 +58,7 @@ const StickyNotesPage = () => {
                   )}
                 </Draggable>
               ))}
-              {provided.placeholder} {/* ✅ Ensures space is created dynamically anywhere in the grid */}
+              {provided.placeholder} {/*  Ensures space is created dynamically anywhere in the grid */}
             </div>
           )}
         </Droppable>

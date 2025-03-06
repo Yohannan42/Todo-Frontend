@@ -42,7 +42,7 @@ const MoodEstimator: React.FC<MoodEstimatorProps> = ({ onMoodSelect, onClose }) 
   };
 
   const determineMood = (responses: string[]): string => {
-    // Simple logic to determine mood (can be expanded)
+    // Simple logic to determine mood 
     if (responses.includes("Happy") || responses.includes("High")) return "Happy";
     if (responses.includes("Stressed") || responses.includes("Low")) return "Stressed";
     if (responses.includes("Calm")) return "Calm";

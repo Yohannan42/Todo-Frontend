@@ -24,8 +24,8 @@ const ProductivityPage = () => {
           return;
         }
   
-        setTasks(fetchedTasks); // ✅ Corrected function
-console.log("Updated tasks state:", fetchedTasks);  // ✅ Corrected from setTodos to setTasks
+        setTasks(fetchedTasks); 
+console.log("Updated tasks state:", fetchedTasks);  // Corrected from setTodos to setTasks
         processData(fetchedTasks);
       } catch (error) {
         console.error("Error fetching tasks:", error);

@@ -14,11 +14,11 @@ import MoodEstimator from "./MoodEstimator";
 import Calendar from "../Calendar/Calendar";
 
 const MoodTrackerPage: React.FC = () => {
-    const [selectedDate, setSelectedDate] = useState<string>(""); // Selected date
-    const [selectedMood, setSelectedMood] = useState<string>(""); // Selected mood
-    const [moods, setMoods] = useState<{ [date: string]: string }>({}); // Store moods by date
-    const [isEstimatorOpen, setIsEstimatorOpen] = useState(false); // State to toggle mood estimator modal
-    const [isDateSelectorOpen, setIsDateSelectorOpen] = useState(false); // State for date selector
+    const [selectedDate, setSelectedDate] = useState<string>(""); 
+    const [selectedMood, setSelectedMood] = useState<string>(""); 
+    const [moods, setMoods] = useState<{ [date: string]: string }>({}); 
+    const [isEstimatorOpen, setIsEstimatorOpen] = useState(false); 
+    const [isDateSelectorOpen, setIsDateSelectorOpen] = useState(false); 
 
     const moodOptions = ["Happy", "Neutral", "Sad", "Stressed", "Excited"];
 
